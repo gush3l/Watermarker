@@ -1,6 +1,6 @@
 Bot:
-  token: OTM4OTA3MTAzMzY2NjQzODA0.YfxHYQ.fTohyoK6JIE3VasjTrpFtwZklO8
-  owner-id: '708630992038002689'
+  token: BOT-TOKEN
+  owner-id: BOT-OWNER-ID
   activity:
     option: default
     activities:
