@@ -1,0 +1,132 @@
+Bot:
+  token: OTM4OTA3MTAzMzY2NjQzODA0.YfxHYQ.fTohyoK6JIE3VasjTrpFtwZklO8
+  owner-id: '708630992038002689'
+  activity:
+    option: default
+    activities:
+      watching: TV
+      playing: Mario
+      listening: to Spotify
+      competing: in ESPORTS
+      default: nothing
+  watermark:
+    restrict-to-owner: false
+    only-in-direct-messages: false
+    command: -watermark
+    command-dark-watermark: -watermarkd
+    command-lighter-watermark: -watermarkl
+Watermark:
+  normal:
+    path: C:\Users\gushel\Desktop\Watermarker\watermark.png
+    type: mosaic
+    final-file-name: '%fileName%-watermarked.%fileExtension%'
+    scale-percentage: 25
+    oppacity: 15
+    rotation-degrees: 25
+  dark:
+    path: C:\Users\gushel\Desktop\Watermarker\watermark-dark.png
+    type: mosaic
+    final-file-name: '%fileName%-watermarked.%fileExtension%'
+    scale-percentage: 75
+    oppacity: 35
+    rotation-degrees: 45
+  light:
+    path: C:\Users\gushel\Desktop\Watermarker\watermark-light.png
+    type: mosaic
+    final-file-name: '%fileName%-watermarked.%fileExtension%'
+    scale-percentage: 25
+    oppacity: 35
+    rotation-degrees: 45
+Commands:
+  help:
+    command: -help
+    restrict-to-owner: false
+    response:
+      embed-title: HELP
+      embed-description: No one can use this bot expect <@708630992038002689>.
+      fields:
+        normal-watermark:
+          in-line: true
+          title: -watermark [url]
+          description: Use the blue watermark for the attached image. Do not attache
+            any other image to use the url provided.
+        dark-watermark:
+          in-line: true
+          title: -watermarkd [url]
+          description: Use the black colored watermark, the same applies for this
+            command.
+        light-watermark:
+          in-line: true
+          title: -watermarkl [url]
+          description: Use the white colored watermark, the rest is self explanatory.
+        reload:
+          in-line: true
+          title: -reload
+          description: Reloads the bot config.
+        configchange:
+          in-line: true
+          title: -config <path>|<newValue>
+          description: Change values from the config file.
+        shutdown:
+          in-line: true
+          title: -shutdown
+          description: Shutdown the bot. **You need to manually turn it on after that!**
+        purge:
+          in-line: true
+          title: -purge <numberOfMessages>
+          description: Purge a number of messages sent by the bot.
+      embed-footer: Watermarker Bot | Made by gush3l#6016
+      embed-thumbnail: ''
+  reload:
+    command: -reload
+    restrict-to-owner: false
+    response:
+      embed-title: RELOAD
+      embed-description: Config reloaded! :)
+      embed-footer: Watermarker Bot | Made by gush3l#6016
+      embed-thumbnail: ''
+  config:
+    command: -config
+    restrict-to-owner: false
+    response:
+      embed-title: CONFIG
+      embed-description: 'Changed the following values for the path %configPath%:'
+      fields:
+        old-value:
+          title: Old Value
+          description: '%oldConfigValue%'
+        new-value:
+          title: New Value
+          description: '%newConfigValue%'
+      embed-footer: Watermarker Bot | Made by gush3l#6016
+      embed-thumbnail: ''
+  shutdown:
+    command: -shutdown
+    restrict-to-owner: false
+    response:
+      embed-title: SHUTDOWN
+      embed-description: Bye 👋
+      embed-footer: Watermarker Bot | Made by gush3l#6016
+      embed-thumbnail: ''
+  purge:
+    command: -purge
+    restrict-to-owner: false
+    error-no-args:
+      embed-title: ERROR
+      embed-description: 'Please specify # of messages to delete!'
+      embed-footer: Watermarker Bot | Made by gush3l#6016
+      embed-thumbnail: ''
+    error-too-many:
+      embed-title: ERROR
+      embed-description: 'Please specify # of messages to delete! Range: 1-100'
+      embed-footer: Watermarker Bot | Made by gush3l#6016
+      embed-thumbnail: ''
+    success:
+      embed-title: ERROR
+      embed-description: Deleted %messages% successfully!
+      embed-footer: Watermarker Bot | Made by gush3l#6016
+      embed-thumbnail: ''
+Messages:
+  cant-use-this-bot: '**You can''t use this bot!** ⚠️'
+  no-attachements-found: '**You need to send an image attached to the message in order
+    to use the bot properly!** ⚠️'
